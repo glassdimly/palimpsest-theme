@@ -1,6 +1,6 @@
 # Palimpsest Dark Theme
 
-A dark CRT-phosphor color palette for Kate/KTextEditor, qt6ct, and Rofi.
+A dark CRT-phosphor color palette for Kate/KTextEditor, qt6ct, Rofi, qBittorrent, and VS Code.
 
 **Palette:** deep void backgrounds (`#080e09`, `#141e22`) with phosphor-green normal text (`#33ff33`), cyan chrome (`#19ffff`), neon accents (purple `#df78ff`, amber `#ffd866`, coral `#ff6e4a`), and deep-violet selection/highlight.
 
@@ -29,6 +29,9 @@ Designed for a writerly, terminal-aesthetic setup on a non-KDE Wayland desktop (
 | `swaylock/config` | `~/.config/swaylock/` | swaylock-effects config — Grimoire ring colors + indicator image |
 | `nwg-drawer/drawer.css` | `~/.config/nwg-drawer/` | NWG Drawer app launcher CSS |
 | `rofi/palimpsest.rasi` | `~/.config/rofi/themes/` | Rofi launcher theme |
+| `qbittorrent/palimpsest.qbtheme` | `~/.config/qBittorrent/` | qBittorrent Qt client theme bundle |
+| `qbittorrent/src/` | — | Source: color palette JSON, Qt QSS template, WebUI CSS template, build script (`gen.sh`) |
+| `vscode/package.json` + `vscode/themes/palimpsest-dark.json` | `~/.vscode/extensions/palimpsest-dark/` | VS Code color theme extension |
 
 ---
 
@@ -94,6 +97,31 @@ Or set it as the default in `~/.config/rofi/config.rasi`:
 ```
 @theme "palimpsest"
 ```
+
+---
+
+### qBittorrent
+
+Copy `qbittorrent/palimpsest.qbtheme` to `~/.config/qBittorrent/` (or run `install.sh`).
+
+In qBittorrent: **View → Interface → Use custom UI Theme** → select `palimpsest.qbtheme`.
+
+To rebuild from source (requires `jq` and `rcc`):
+
+```bash
+cd qbittorrent/src
+bash gen.sh --qt-only themes/palimpsest.json
+```
+
+The built bundle lands in `qt/palimpsest.qbtheme`.
+
+---
+
+### VS Code
+
+Copy the `vscode/` directory to `~/.vscode/extensions/palimpsest-dark/` (or run `install.sh`).
+
+Restart VS Code, then: **Preferences → Color Theme → Palimpsest Dark**.
 
 ---
 

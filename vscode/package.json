@@ -1,0 +1,18 @@
+{
+  "name": "palimpsest-dark",
+  "publisher": "local",
+  "displayName": "Palimpsest Dark",
+  "description": "Phosphor Teal + Gold on deep ink. Grimoire dark theme.",
+  "version": "1.0.0",
+  "engines": { "vscode": "^1.60.0" },
+  "categories": ["Themes"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Palimpsest Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/palimpsest-dark.json"
+      }
+    ]
+  }
+}

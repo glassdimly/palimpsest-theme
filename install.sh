@@ -16,6 +16,8 @@ SWAYNC_DIR="${HOME}/.config/swaync"
 SWAYLOCK_DIR="${HOME}/.config/swaylock"
 NWG_DRAWER_DIR="${HOME}/.config/nwg-drawer"
 ROFI_DIR="${HOME}/.config/rofi/themes"
+QBITTORRENT_DIR="${HOME}/.config/qBittorrent"
+VSCODE_EXT_DIR="${HOME}/.vscode/extensions/palimpsest-dark"
 
 echo "Installing Palimpsest Dark theme files..."
 echo ""
@@ -93,6 +95,19 @@ mkdir -p "${ROFI_DIR}"
 cp "${REPO_DIR}/rofi/palimpsest.rasi" "${ROFI_DIR}/"
 echo "  ✓ rofi → ${ROFI_DIR}/"
 
+# ── qBittorrent ───────────────────────────────────────────────────────────────
+mkdir -p "${QBITTORRENT_DIR}"
+cp "${REPO_DIR}/qbittorrent/palimpsest.qbtheme" "${QBITTORRENT_DIR}/"
+echo "  ✓ qbittorrent → ${QBITTORRENT_DIR}/palimpsest.qbtheme"
+echo "    In qBittorrent: View → Interface → Use custom UI Theme → select that file"
+
+# ── VS Code ───────────────────────────────────────────────────────────────────
+mkdir -p "${VSCODE_EXT_DIR}/themes"
+cp "${REPO_DIR}/vscode/package.json" "${VSCODE_EXT_DIR}/"
+cp "${REPO_DIR}/vscode/themes/palimpsest-dark.json" "${VSCODE_EXT_DIR}/themes/"
+echo "  ✓ vscode → ${VSCODE_EXT_DIR}/"
+echo "    Restart VS Code, then select theme: Palimpsest Dark"
+
 # ── gsettings (GNOME / GTK font + color-scheme) ──────────────────────────────
 if command -v gsettings >/dev/null 2>&1; then
     gsettings set org.gnome.desktop.interface color-scheme    prefer-dark    2>/dev/null || true
@@ -112,3 +127,5 @@ echo "  Sway: add 'include ~/.config/sway/palimpsest-colors.conf' to sway config
 echo "  Rofi: add '@theme \"palimpsest\"' to ~/.config/rofi/config.rasi"
 echo "  KDE : System Settings → Colors → Palimpsest Dark"
 echo "  Swaylock: copy bg-globe.png to ~/.config/swaylock/ (not included — personal asset)"
+echo "  qBittorrent: View → Interface → Use custom UI Theme → ~/.config/qBittorrent/palimpsest.qbtheme"
+echo "  VS Code: restart, then Preferences → Color Theme → Palimpsest Dark"

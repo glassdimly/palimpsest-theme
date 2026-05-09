@@ -2,10 +2,10 @@
     "custom-styles": {
     },
     "editor-colors": {
-        "BackgroundColor": "#080e09",
+        "BackgroundColor": "#0d1518",
         "BracketMatching": "#c9a84c",
         "CodeFolding": "#4a1a8a",
-        "CurrentLine": "#0f1c11",
+        "CurrentLine": "#141e22",
         "CurrentLineNumber": "#e5cd84",
         "IconBorder": "#0d1518",
         "IndentationLine": "#1a1720",
@@ -125,8 +125,8 @@
             "text-color": "#df78ff"
         },
         "Normal": {
-            "selected-text-color": "#33ff33",
-            "text-color": "#33ff33"
+            "selected-text-color": "#19ffff",
+            "text-color": "#19ffff"
         },
         "Operator": {
             "selected-text-color": "#7fefff",
