@@ -1,0 +1,463 @@
+/* =============================================================================
+   Palimpsest — Grimoire dark theme (Phosphor Teal + Neon Orange)
+   ============================================================================= */
+
+/* Primitives */
+@define-color ink-100      #0d1518;
+@define-color ink-150      #141e22;
+@define-color ink-200      #1a1720;
+@define-color purple-300   #4a1a8a;
+@define-color purple-400   #9d4edd;   /* bright violet — tray accent */
+@define-color teal-200     #19ffff;
+@define-color teal-400     #0baaba;
+@define-color orange-light #ffb380;   /* soft warm orange — general text */
+@define-color orange       #ff6e4a;   /* neon orange — accent/clock/borders */
+@define-color neon-red     #ff3d71;
+@define-color neon-green   #64ff64;
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+/* Default font for workspaces, mode, scratchpad, window title */
+#workspaces,
+#mode,
+#scratchpad,
+#window {
+    font-family: "Crimson Pro", serif;
+    font-size: 16px;
+}
+
+/* Window title override — Alegreya Sans */
+#window {
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+}
+
+/* Right-side modules — monospace for icons and data */
+#workspaces button,
+#cpu,
+#custom-memory,
+#gamemode,
+#custom-temp,
+#custom-display,
+#network,
+#bluetooth,
+#pulseaudio,
+#battery,
+#idle_inhibitor,
+#clock,
+#tray {
+    font-family: "MesloLGS Nerd Font Mono", monospace;
+    font-size: 16px;
+}
+
+window#waybar {
+    background-color: @ink-100;
+    /* CRT scanline overlay — 4px period, matches grimoire CodeBlock (rgba 0,0,0,0.18) */
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.18) 2px,
+        rgba(0, 0, 0, 0.18) 4px
+    );
+    color: @orange-light;
+    /* Ambient teal phosphor glow beneath the bar — mirrors code block shadow */
+    box-shadow: 0 2px 16px rgba(0, 186, 186, 0.18),
+                0 0 28px rgba(0, 186, 186, 0.07);
+    transition-duration: 0.2s;
+}
+
+/* Kids launcher — Tux */
+#custom-kids {
+    font-family: "MesloLGS Nerd Font Mono", monospace;
+    font-size: 20px;
+    padding: 0 8px;
+    color: @teal-400;
+    text-shadow: 0 0 6px rgba(11, 170, 186, 0.7),
+                 0 0 16px rgba(11, 170, 186, 0.3);
+}
+
+#custom-kids:hover {
+    color: @teal-200;
+    text-shadow: 0 0 8px rgba(25, 255, 255, 0.8),
+                 0 0 20px rgba(25, 255, 255, 0.4);
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 0 8px;
+    background-color: transparent;
+    color: @teal-400;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button:hover {
+    background-color: @ink-150;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent, transparent 2px,
+        rgba(0, 0, 0, 0.18) 2px, rgba(0, 0, 0, 0.18) 4px
+    );
+    color: @teal-200;
+    border-bottom: 2px solid @teal-400;
+    box-shadow: none;
+}
+
+#workspaces button.focused {
+    background-color: @purple-300;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent, transparent 2px,
+        rgba(0, 0, 0, 0.18) 2px, rgba(0, 0, 0, 0.18) 4px
+    );
+    color: @teal-200;
+    border-bottom: 2px solid @orange;
+    /* Purple inner glow — emboss on focused workspace */
+    box-shadow: inset 0 0 10px rgba(130, 60, 210, 0.35),
+                0 0 8px rgba(130, 60, 210, 0.2);
+}
+
+#workspaces button.urgent {
+    background-color: @neon-red;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent, transparent 2px,
+        rgba(0, 0, 0, 0.18) 2px, rgba(0, 0, 0, 0.18) 4px
+    );
+    color: white;
+    box-shadow: 0 0 8px rgba(255, 61, 113, 0.6);
+}
+
+/* Mode (resize/etc) */
+#mode {
+    background-color: @purple-300;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent, transparent 2px,
+        rgba(0, 0, 0, 0.18) 2px, rgba(0, 0, 0, 0.18) 4px
+    );
+    color: @teal-200;
+    padding: 0 10px;
+    border-bottom: 2px solid @orange;
+}
+
+/* Scratchpad */
+#scratchpad {
+    background-color: @ink-150;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent, transparent 2px,
+        rgba(0, 0, 0, 0.18) 2px, rgba(0, 0, 0, 0.18) 4px
+    );
+    color: @orange-light;
+    padding: 0 8px;
+}
+
+/* Window title (center) */
+#window {
+    color: @orange-light;
+}
+
+#cpu,
+#custom-memory,
+#network,
+#pulseaudio,
+#battery,
+#clock,
+#tray,
+#bluetooth,
+#gamemode,
+#custom-display,
+#custom-temp {
+    padding: 0 8px;
+}
+
+#idle_inhibitor {
+    padding: 0 8px;
+    font-size: 24px;
+}
+
+#idle_inhibitor.deactivated {
+    color: @teal-400;
+    opacity: 0.3;
+    text-shadow: none;
+}
+
+#idle_inhibitor.activated,
+#idle_inhibitor.active {
+    color: @orange;
+    opacity: 1;
+    text-shadow: 0 0 8px rgba(255, 110, 74, 0.6),
+                 0 0 18px rgba(255, 110, 74, 0.25);
+}
+
+#cpu {
+    color: @teal-400;
+    font-size: 20px;
+    /* Teal phosphor glow — CRT chip icon */
+    text-shadow: 0 0 6px rgba(11, 170, 186, 0.7),
+                 0 0 16px rgba(11, 170, 186, 0.3);
+}
+
+#custom-memory {
+    color: @teal-400;
+    /* Subtle teal phosphor glow */
+    text-shadow: 0 0 5px rgba(11, 170, 186, 0.55),
+                 0 0 12px rgba(11, 170, 186, 0.22);
+}
+
+#custom-memory.warning {
+    color: @orange;
+    text-shadow: 0 0 6px rgba(255, 110, 74, 0.6),
+                 0 0 14px rgba(255, 110, 74, 0.25);
+}
+
+#custom-memory.critical {
+    color: @neon-red;
+    text-shadow: 0 0 8px rgba(255, 61, 113, 0.7),
+                 0 0 18px rgba(255, 61, 113, 0.3);
+}
+
+#gamemode {
+    color: @neon-green;
+    /* Neon green glow — active game indicator */
+    text-shadow: 0 0 8px rgba(100, 255, 100, 0.75),
+                 0 0 20px rgba(100, 255, 100, 0.3);
+}
+
+/* Streaming launcher */
+#custom-game-launcher {
+    font-family: "MesloLGS Nerd Font Mono", monospace;
+    font-size: 20px;
+    padding: 0 6px;
+    color: @teal-400;
+    text-shadow: 0 0 5px rgba(11, 170, 186, 0.55),
+                 0 0 12px rgba(11, 170, 186, 0.22);
+}
+
+#custom-game-launcher.running {
+    color: @neon-green;
+    text-shadow: 0 0 8px rgba(100, 255, 100, 0.75),
+                 0 0 20px rgba(100, 255, 100, 0.3);
+}
+
+#custom-game-launcher:hover {
+    color: @teal-200;
+}
+
+#custom-temp {
+    color: @teal-400;
+    text-shadow: 0 0 5px rgba(11, 170, 186, 0.55),
+                 0 0 12px rgba(11, 170, 186, 0.22);
+}
+
+#custom-display {
+    font-size: 18px;
+    color: @teal-400;
+    padding: 0 8px;
+    text-shadow: 0 0 5px rgba(11, 170, 186, 0.55),
+                 0 0 12px rgba(11, 170, 186, 0.22);
+}
+
+#custom-display.headless {
+    color: @orange-light;
+    text-shadow: 0 0 5px rgba(255, 179, 128, 0.45),
+                 0 0 12px rgba(255, 179, 128, 0.18);
+}
+
+#custom-display.vnc {
+    color: @neon-green;
+    text-shadow: 0 0 4px #64ff64,
+                 0 0 10px rgba(100, 255, 100, 1),
+                 0 0 20px rgba(100, 255, 100, 0.9),
+                 0 0 40px rgba(100, 255, 100, 0.6),
+                 0 0 60px rgba(100, 255, 100, 0.3);
+}
+
+#network {
+    color: @teal-400;
+    text-shadow: 0 0 5px rgba(11, 170, 186, 0.55),
+                 0 0 12px rgba(11, 170, 186, 0.22);
+}
+
+#network.disconnected {
+    color: @neon-red;
+    text-shadow: 0 0 6px rgba(255, 61, 113, 0.55);
+}
+
+#bluetooth {
+    color: @teal-400;
+    text-shadow: 0 0 5px rgba(11, 170, 186, 0.5),
+                 0 0 12px rgba(11, 170, 186, 0.2);
+}
+
+#bluetooth.connected {
+    color: @teal-200;
+    text-shadow: 0 0 6px rgba(25, 255, 255, 0.6),
+                 0 0 16px rgba(25, 255, 255, 0.25);
+}
+
+#bluetooth.off {
+    color: @ink-200;
+    text-shadow: none;
+}
+
+#pulseaudio {
+    color: @teal-400;
+    text-shadow: 0 0 5px rgba(11, 170, 186, 0.55),
+                 0 0 12px rgba(11, 170, 186, 0.22);
+}
+
+#pulseaudio.muted {
+    color: @ink-200;
+    text-shadow: none;
+}
+
+#clock {
+    color: @orange;
+    font-weight: bold;
+    padding: 0 8px;
+    /* Orange phosphor glow — matches neon-orange syntax token */
+    text-shadow: 0 0 8px rgba(255, 110, 74, 0.6),
+                 0 0 20px rgba(255, 110, 74, 0.25);
+}
+
+#tray {
+    padding: 0 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @purple-300;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent, transparent 2px,
+        rgba(0, 0, 0, 0.18) 2px, rgba(0, 0, 0, 0.18) 4px
+    );
+}
+
+/* Temperature state glows */
+#custom-temp.cool {
+    color: @teal-400;
+    text-shadow: 0 0 5px rgba(11, 170, 186, 0.55),
+                 0 0 12px rgba(11, 170, 186, 0.22);
+}
+
+#custom-temp.warm {
+    color: @orange-light;
+    text-shadow: 0 0 5px rgba(255, 179, 128, 0.45),
+                 0 0 12px rgba(255, 179, 128, 0.18);
+}
+
+#custom-temp.orange {
+    color: @orange;
+    text-shadow: 0 0 6px rgba(255, 110, 74, 0.55),
+                 0 0 14px rgba(255, 110, 74, 0.22);
+}
+
+#custom-temp.hot {
+    color: #ff3030;
+    text-shadow: 0 0 8px rgba(255, 48, 48, 0.65),
+                 0 0 18px rgba(255, 48, 48, 0.28);
+}
+
+#custom-temp.red {
+    color: @neon-red;
+    text-shadow: 0 0 10px rgba(255, 61, 113, 0.7),
+                 0 0 22px rgba(255, 61, 113, 0.3);
+}
+
+#custom-temp.critical {
+    color: @neon-red;
+    text-shadow: 0 0 10px rgba(255, 61, 113, 0.85),
+                 0 0 24px rgba(255, 61, 113, 0.4);
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    from {
+        color: @neon-red;
+        background-color: transparent;
+        background-image: repeating-linear-gradient(
+            0deg,
+            transparent, transparent 2px,
+            rgba(0, 0, 0, 0.18) 2px, rgba(0, 0, 0, 0.18) 4px
+        );
+    }
+    to {
+        color: @ink-100;
+        background-color: @neon-red;
+        background-image: repeating-linear-gradient(
+            0deg,
+            transparent, transparent 2px,
+            rgba(0, 0, 0, 0.18) 2px, rgba(0, 0, 0, 0.18) 4px
+        );
+    }
+}
+
+/* ── Notification bell (swaync) ────────────────────────────── */
+
+#custom-notification {
+    font-family: "MesloLGS Nerd Font Mono", monospace;
+    font-size: 20px;
+    padding: 0 8px;
+    color: @teal-400;
+    text-shadow: 0 0 5px rgba(11, 170, 186, 0.5),
+                 0 0 12px rgba(11, 170, 186, 0.2);
+}
+
+/* DND active — neon-red with glow */
+#custom-notification.dnd-none {
+    color: @teal-400;
+}
+
+#custom-notification.dnd-notification {
+    color: @neon-red;
+    text-shadow: 0 0 8px rgba(255, 61, 113, 0.6),
+                 0 0 18px rgba(255, 61, 113, 0.25);
+}
+
+/* Unread notifications — orange pulse */
+#custom-notification.notification-new {
+    color: @orange;
+    text-shadow: 0 0 8px rgba(255, 110, 74, 0.6),
+                 0 0 18px rgba(255, 110, 74, 0.25);
+}
+
+/* ── Battery ────────────────────────────────────────────────── */
+
+#battery {
+    font-size: 18px;
+    color: @teal-400;
+    text-shadow: 0 0 5px rgba(11, 170, 186, 0.55),
+                 0 0 12px rgba(11, 170, 186, 0.22);
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @neon-green;
+    text-shadow: 0 0 6px rgba(100, 255, 100, 0.65),
+                 0 0 16px rgba(100, 255, 100, 0.28);
+}
+
+#battery.warning:not(.charging) {
+    color: @orange;
+    text-shadow: 0 0 6px rgba(255, 110, 74, 0.6),
+                 0 0 14px rgba(255, 110, 74, 0.25);
+}
+
+#battery.critical:not(.charging) {
+    color: @neon-red;
+    text-shadow: 0 0 10px rgba(255, 61, 113, 0.85),
+                 0 0 24px rgba(255, 61, 113, 0.4);
+    animation: blink 1s linear infinite;
+}

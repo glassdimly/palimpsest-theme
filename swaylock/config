@@ -1,0 +1,53 @@
+# swaylock-effects — Palimpsest Grimoire dark
+# palette: ink-100 #0d1518  ink-150 #141e22  purple-300 #4a1a8a
+#          teal-200 #19ffff  teal-400 #0baaba  orange #ff6e4a
+#          orange-light #ffb380  neon-red #ff3d71
+#
+# Requires swaylock-effects (not plain swaylock) for indicator-image support.
+# install.sh will substitute __CONFIG_DIR__ with ~/.config/swaylock.
+
+# Background — dark solid (globe lives inside the indicator ring)
+color=0d1518ff
+
+# Indicator geometry — large ring with globe image inside
+indicator-radius=275
+indicator-thickness=28
+indicator-image=__CONFIG_DIR__/bg-globe.png
+indicator
+indicator-idle-visible
+
+# --- Idle (no input) — ring invisible, globe only ---
+ring-color=00000000
+inside-color=00000000
+line-color=00000000
+text-color=ff6e4aff
+key-hl-color=19ffffff
+bs-hl-color=ff3d71ff
+separator-color=00000000
+
+# --- Verifying ---
+ring-ver-color=0baabaff
+inside-ver-color=00000000
+line-ver-color=00000000
+text-ver-color=0baabaff
+
+# --- Wrong password ---
+ring-wrong-color=ff3d71ff
+inside-wrong-color=00000000
+line-wrong-color=00000000
+text-wrong-color=ff3d71ff
+
+# --- Cleared (backspace to empty) ---
+ring-clear-color=ff6e4aff
+inside-clear-color=00000000
+line-clear-color=00000000
+text-clear-color=ffb380ff
+
+# Font
+font=IM FELL English SC
+font-size=82
+
+# Behaviour
+daemonize
+ignore-empty-password
+show-failed-attempts

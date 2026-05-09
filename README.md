@@ -13,10 +13,21 @@ Designed for a writerly, terminal-aesthetic setup on a non-KDE Wayland desktop (
 | File | Installs to | Purpose |
 |------|-------------|---------|
 | `kate/palimpsest-dark.theme` | `~/.local/share/org.kde.syntax-highlighting/themes/` | Kate / KTextEditor syntax highlighting theme |
-| `qt6ct/colors/palimpsest-dark.conf` | `~/.config/qt6ct/colors/` | Qt6 application palette (QPalette roles) for qt6ct |
-| `qt6ct/qss/kate-writerly.qss` | `~/.config/qt6ct/qss/` | QSS chrome styling — phosphor glow on menubar, toolbar, statusbar, dockwidget titles |
+| `kde/PalimpsestDark.colors` | `~/.local/share/color-schemes/` | KDE Plasma color scheme (all QPalette roles) |
+| `qt6ct/colors/palimpsest-dark.conf` | `~/.config/qt6ct/colors/` | Qt6 palette for qt6ct (non-Plasma desktops) |
+| `qt6ct/qss/kate-writerly.qss` | `~/.config/qt6ct/qss/` | QSS chrome styling — phosphor glow on menubar, toolbar, statusbar, dock titles |
 | `qt6ct/qss/scanlines.png` | `~/.config/qt6ct/qss/` | 4×8px scanline tile used by the QSS |
 | `qt6ct/qss/scanlines.svg` | `~/.config/qt6ct/qss/` | Source SVG for the scanline tile |
+| `gtk/gtk-3.0/gtk.css` | `~/.config/gtk-3.0/` | GTK3 chrome overlay — menubar + headerbar phosphor glow |
+| `gtk/gtk-3.0/settings.ini` | `~/.config/gtk-3.0/` | GTK3 settings — Adwaita-dark base, Crimson Pro font |
+| `gtk/gtk-4.0/gtk.css` | `~/.config/gtk-4.0/` | GTK4 chrome overlay — menubar + headerbar phosphor glow |
+| `gtk/gtk-4.0/settings.ini` | `~/.config/gtk-4.0/` | GTK4 settings — Adwaita-dark base, Crimson Pro font |
+| `kitty/palimpsest-dark.conf` | `~/.config/kitty/` | Kitty terminal colors, font, cursor (include from kitty.conf) |
+| `sway/colors.conf` | `~/.config/sway/palimpsest-colors.conf` | Sway/SwayFX window border colors, font, shadows (include from sway config) |
+| `waybar/style.css` | `~/.config/waybar/` | Waybar CSS — full Grimoire dark bar with phosphor glows and scanline overlay |
+| `swaync/style.css` | `~/.config/swaync/` | SwayNC notification center CSS — full Grimoire dark theme |
+| `swaylock/config` | `~/.config/swaylock/` | swaylock-effects config — Grimoire ring colors + indicator image |
+| `nwg-drawer/drawer.css` | `~/.config/nwg-drawer/` | NWG Drawer app launcher CSS |
 | `rofi/palimpsest.rasi` | `~/.config/rofi/themes/` | Rofi launcher theme |
 
 ---

@@ -1,0 +1,142 @@
+/* Palimpsest — Grimoire dark theme for nwg-drawer */
+
+window {
+    background-color: rgba(13, 21, 24, 0.92);
+    color: #ffb380;
+}
+
+/* Search entry */
+entry {
+    background-color: #141e22;
+    color: #ffb380;
+    border: 1px solid #0baaba;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-family: "MesloLGS Nerd Font Mono", monospace;
+    font-size: 15px;
+    caret-color: #19ffff;
+}
+
+entry:focus {
+    border-color: #19ffff;
+    box-shadow: 0 0 8px rgba(25, 255, 255, 0.35);
+}
+
+/* Remove all box/container backgrounds */
+box,
+scrolledwindow,
+viewport,
+scrolledwindow > *,
+#pinned-box {
+    background-color: transparent;
+    background: none;
+    border: none;
+}
+
+/* Category buttons */
+button,
+image {
+    background: none;
+    border: none;
+}
+
+#category-button {
+    margin: 0 6px;
+    padding: 4px 10px;
+    color: #0baaba;
+    font-family: "Space Mono", "MesloLGS Nerd Font Mono", monospace;
+    font-size: 17px;
+    border-radius: 4px;
+    text-shadow: 0 0 5px rgba(11, 170, 186, 0.55),
+                 0 0 12px rgba(11, 170, 186, 0.22);
+}
+
+#category-button:hover {
+    background-color: rgba(255, 110, 74, 0.12);
+    color: #ff6e4a;
+    text-shadow: 0 0 8px rgba(255, 110, 74, 0.7),
+                 0 0 18px rgba(255, 110, 74, 0.3);
+}
+
+#category-button:checked {
+    background-color: #4a1a8a;
+    color: #19ffff;
+    border-bottom: 2px solid #ff6e4a;
+}
+
+/* App grid items */
+flowboxchild {
+    border-radius: 8px;
+    padding: 8px;
+    background-color: transparent;
+}
+
+flowboxchild box,
+flowboxchild button,
+flowboxchild > * {
+    background-color: transparent;
+    background: none;
+    border: 1px solid transparent;
+    box-shadow: none;
+}
+
+flowboxchild:hover {
+    background-color: rgba(255, 110, 74, 0.15);
+    box-shadow: 0 0 12px rgba(255, 110, 74, 0.5),
+                inset 0 0 8px rgba(255, 110, 74, 0.15);
+}
+
+flowboxchild button:hover,
+button:hover {
+    background-color: transparent;
+    border: 1px solid #ff6e4a;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(255, 110, 74, 0.7),
+                0 0 18px rgba(255, 110, 74, 0.3),
+                inset 0 0 6px rgba(255, 110, 74, 0.1);
+}
+
+flowboxchild button:hover label,
+button:hover label {
+    color: #ff6e4a;
+    text-shadow: 0 0 8px rgba(255, 110, 74, 0.7),
+                 0 0 16px rgba(255, 110, 74, 0.3);
+}
+
+flowboxchild:selected {
+    background-color: #4a1a8a;
+}
+
+/* App labels */
+label {
+    color: #0baaba;
+    font-family: "Space Mono", "MesloLGS Nerd Font Mono", monospace;
+    font-size: 15px;
+    padding-top: 4px;
+    text-shadow: 0 0 5px rgba(11, 170, 186, 0.55),
+                 0 0 12px rgba(11, 170, 186, 0.22);
+}
+
+/* Scrollbar */
+scrollbar {
+    background-color: transparent;
+    border: none;
+}
+
+scrollbar slider {
+    background-color: #0baaba;
+    border-radius: 4px;
+    min-width: 4px;
+    min-height: 4px;
+}
+
+scrollbar slider:hover {
+    background-color: #19ffff;
+}
+
+/* Math label */
+#math-label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #19ffff;
+}

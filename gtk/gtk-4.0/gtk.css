@@ -1,0 +1,84 @@
+/* =============================================================================
+   Palimpsest — Grimoire dark overlay for GTK4 app chrome
+   Targets: menubar, headerbar
+   ============================================================================= */
+
+/* ── Menubar (File / Edit / View … bar) ─────────────────────────────────── */
+
+menubar {
+    background-color: #0d1518;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,        transparent 2px,
+        rgba(0,0,0,0.18)   2px,
+        rgba(0,0,0,0.18)   4px
+    );
+    border-bottom: 1px solid #1a1720;
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 16px;
+}
+
+menubar > menuitem {
+    padding: 2px 8px;
+    color: #ffb380;
+}
+
+menubar > menuitem > label {
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 16px;
+    color: #ffb380;
+    text-shadow: 0 0 6px rgba(255, 110, 74, 0.55),
+                 0 0 14px rgba(255, 110, 74, 0.2);
+}
+
+menubar > menuitem:hover {
+    background-color: #141e22;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,        transparent 2px,
+        rgba(0,0,0,0.18)   2px,
+        rgba(0,0,0,0.18)   4px
+    );
+}
+
+menubar > menuitem:hover > label {
+    color: #ff6e4a;
+    text-shadow: 0 0 8px rgba(255, 110, 74, 0.7),
+                 0 0 18px rgba(255, 110, 74, 0.3);
+}
+
+/* ── Headerbar ───────────────────────────────────────────────────────────── */
+
+headerbar {
+    background-color: #0d1518;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,        transparent 2px,
+        rgba(0,0,0,0.18)   2px,
+        rgba(0,0,0,0.18)   4px
+    );
+    border-bottom: 1px solid #1a1720;
+    color: #ffb380;
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 16px;
+}
+
+headerbar label {
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 16px;
+    color: #ffb380;
+    text-shadow: 0 0 6px rgba(255, 110, 74, 0.5),
+                 0 0 14px rgba(255, 110, 74, 0.18);
+}
+
+headerbar .title {
+    color: #19ffff;
+    text-shadow: 0 0 6px rgba(25, 255, 255, 0.55),
+                 0 0 14px rgba(25, 255, 255, 0.2);
+}
+
+headerbar .subtitle {
+    color: #0baaba;
+    text-shadow: 0 0 5px rgba(11, 170, 186, 0.5),
+                 0 0 12px rgba(11, 170, 186, 0.18);
+}
