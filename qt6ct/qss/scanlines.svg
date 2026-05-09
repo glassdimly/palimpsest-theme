@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2" height="4" viewBox="0 0 2 4">
+  <!-- 2×4px tile: top 2px transparent, bottom 2px dark = one scanline per 4px period -->
+  <rect x="0" y="2" width="2" height="2" fill="#000000" fill-opacity="0.22"/>
+</svg>

@@ -1,0 +1,289 @@
+/*******************************************************************************
+ * ROFI Color theme
+ * Based on fancy by DaveDavenport
+ * Recolored with BakBak palette — dark terminal: teal, purple, neon orange
+ ********************************************************************************/
+* {
+    background:                  rgba ( 13, 17, 22, 95 % );
+    background-color:            transparent;
+
+    foreground:                  rgba ( 101, 254, 255, 100 % );
+    normal-foreground:           @foreground;
+    alternate-normal-foreground: @foreground;
+
+    normal-background:           rgba ( 13, 17, 22, 0 % );
+    alternate-normal-background: rgba ( 13, 17, 22, 0 % );
+
+    selected-normal-background:  rgba ( 25, 32, 66, 100 % );
+    selected-normal-foreground:  rgba ( 101, 254, 255, 100 % );
+
+    separatorcolor:              rgba ( 0, 214, 214, 100 % );
+    bordercolor:                 rgba ( 132, 53, 212, 100 % );
+
+    active-foreground:           rgba ( 0, 193, 193, 100 % );
+    active-background:           rgba ( 13, 17, 22, 0 % );
+    selected-active-foreground:  rgba ( 0, 214, 214, 100 % );
+    selected-active-background:  rgba ( 25, 32, 66, 100 % );
+    alternate-active-background: rgba ( 13, 17, 22, 0 % );
+    alternate-active-foreground: @active-foreground;
+
+    urgent-foreground:           rgba ( 255, 110, 74, 100 % );
+    urgent-background:           rgba ( 13, 17, 22, 0 % );
+    selected-urgent-foreground:  rgba ( 255, 61, 113, 100 % );
+    selected-urgent-background:  rgba ( 132, 53, 212, 100 % );
+    alternate-urgent-background: rgba ( 13, 17, 22, 0 % );
+    alternate-urgent-foreground: @urgent-foreground;
+
+    lightbg:                     rgba ( 25, 32, 66, 100 % );
+}
+
+window {
+    border-color:     rgba ( 150, 70, 230, 100 % );
+    outline-color:    rgba ( 132, 53, 212, 25 % );
+    background-color: rgba ( 13, 17, 22, 97 % );
+    border:           4px;
+    outline:          6px;
+    padding:          0px;
+    border-radius:    10px;
+    padding:          0.5em;
+    spacing:          0px;
+
+    anchor:         north;
+    location:       center;
+    y-offset:       -15.5em;
+
+    children: [ inputbar, message, wrapper-mode-switcher, listview , pagerbox ];
+}
+
+pagerbox {
+    expand: false;
+    orientation: horizontal;
+    children: [ icon-left, pad, icon-right ];
+}
+
+pad {
+    expand: true;
+}
+
+icon-left {
+    expand: false;
+    filename: "go-previous";
+    size: 24;
+    vertical-align: 0.5;
+    action: "kb-page-prev";
+}
+
+icon-right {
+    expand: false;
+    filename: "go-next";
+    size: 24;
+    vertical-align: 0.5;
+    action: "kb-page-next";
+}
+
+wrapper-mode-switcher {
+    orientation: horizontal;
+    expand:     false;
+    spacing:    0;
+    children: [ icon-ms-ic1, mode-switcher, icon-ms-ic2 ];
+}
+
+icon-ms-ic1 {
+    filename: "go-previous";
+}
+icon-ms-ic2 {
+    filename: "go-next";
+}
+icon-ms-ic1,icon-ms-ic2 {
+    size: 16;
+    vertical-align: 0.8;
+    expand:        false;
+    border:       0px 0px 2px ;
+    border-color: @separatorcolor;
+}
+
+mode-switcher {
+    border:  0px;
+    spacing: 0px;
+    expand: true;
+}
+
+button {
+    padding:      2px;
+    border:       0px 0px 2px ;
+    border-color: @separatorcolor;
+}
+
+button selected.normal {
+    text-color: rgba ( 101, 254, 255, 100 % );
+    background-color: rgba ( 25, 32, 66, 80 % );
+    border:       2px 2px 0px ;
+    border-color: @separatorcolor;
+    border-radius:    10px 10px 0 0;
+}
+
+sidebar {
+    expand: false;
+}
+
+message {
+    text-color:       rgba ( 101, 254, 255, 100 % );
+    background-color: rgba ( 25, 32, 66, 50 % );
+    border-color:     rgba ( 132, 53, 212, 100 % );
+    border:           2px;
+    border-radius:    5px;
+    padding:          4px;
+    margin:           0px 0px 0.5em;
+    expand:           false;
+}
+
+message textbox {
+    text-color:       rgba ( 101, 254, 255, 100 % );
+    background-color: transparent;
+}
+
+listview {
+    spacing:      2px ;
+    scrollbar:    false;
+    padding:      0.5em;
+    background-color: rgba ( 5, 8, 12, 70 % );
+    expand:       true;
+    border:       0px 2px 2px ;
+    border-color: @separatorcolor;
+    border-radius: 0px 0px 10px 10px;
+}
+
+element {
+    border:  1;
+    border-color: transparent;
+    padding: 4px ;
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+    font:             "Alegreya 15";
+}
+element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+element.selected.normal {
+    border:           1;
+    border-color:     rgba ( 0, 214, 214, 60 % );
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+element.selected.urgent {
+    border:  1;
+    border-color: rgba ( 255, 110, 74, 60 % );
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+element.selected.active {
+    border:  1;
+    border-color: rgba ( 0, 214, 214, 60 % );
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+
+scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-width: 8px ;
+    padding:      0;
+}
+
+sidebar {
+    border:       2px 0px 0px ;
+    border-color: @separatorcolor;
+}
+
+inputbar {
+    text-color: @foreground;
+    padding: 0px 0px 0.5em;
+}
+
+case-indicator {
+    text-color: @foreground;
+}
+
+wrapper {
+    orientation: horizontal;
+    text-color:       rgba ( 101, 254, 255, 100 % );
+    background-color: rgba ( 25, 32, 66, 70 % );
+    border-color:     rgba ( 132, 53, 212, 100 % );
+    border: 2px;
+    border-radius: 5px;
+    padding: 4px;
+    children:   [ prompt, entry, icon-paste];
+    spacing:  0.5em;
+}
+
+button-paste {
+    expand: false;
+    str: "gtk-paste";
+    size: 24;
+    vertical-align: 0.5;
+    action: "kb-cancel";
+}
+
+icon-paste {
+    expand: false;
+    filename: "gtk-paste";
+    size: 24;
+    vertical-align: 0.5;
+    action: "kb-primary-paste";
+}
+
+cursor-prompt {
+    expand:         false;
+    str:            "_";
+    text-color:     rgba ( 100, 255, 120, 100 % );
+    vertical-align: 0.5;
+    padding:        0px 4px;
+    min-width:      12px;
+}
+
+prompt {
+    expand:         false;
+    text-color:     rgba ( 100, 255, 120, 100 % );
+    vertical-align: 0.5;
+    padding:        0px 4px;
+}
+
+entry {
+    vertical-align: 0.5;
+    text-color:     rgba ( 255, 110, 74, 100 % );
+}
+
+inputbar {
+    children:   [ wrapper ];
+}
+
+error-message {
+    background-color: rgba ( 255, 61, 113, 10 % );
+    border-color: rgba ( 255, 61, 113, 100 % );
+    border-radius: 10px;
+    border: 2px;
+    padding: 0.5em;
+}

@@ -1,0 +1,251 @@
+Kate Retro Scanlines Plugin — License
+
+Copyright 2026 Jeremiah John (glassdimly)
+
+---
+
+## Public License
+
+Any individual, nonprofit, open-source project, or organization with annual
+revenue under ten million dollars ($10,000,000 USD) may use, copy, modify,
+and distribute this software and its source code freely under the terms of
+the Apache License 2.0, a copy of which is included in this repository as
+LICENSE-APACHE.
+
+The gist: use it, fork it, ship it. Build something good with it.
+
+If your organization's annual revenue exceeds ten million dollars in the year
+in which you deploy, distribute, or incorporate this software — including as
+a dependency in a larger product or service — the Poison Pill License below
+applies to you, unless the author specifies otherwise in writing.
+
+---
+
+## A Poison Pill
+
+Open source software is a commons. It is built by volunteers on nights and
+weekends, by hobbyists scratching an itch, by developers who wanted something
+to exist in the world and made it so. Corporations extract enormous value from
+this commons. They build billion-dollar infrastructure on it. They hire the
+developers who built it, extract their remaining productive years, and discard
+them. They surveil the users who run it. They train AI on its output without
+attribution or compensation. They do all of this while lobbying against the
+worker protections, environmental regulations, and democratic institutions that
+make a dignified human life possible.
+
+They do not ask permission. They implicitly opt in. This license does the same
+to them.
+
+If a corporation deploys this plugin — in a product, a service, a bundled IDE
+distribution, a cloud development environment, an AI coding assistant, or any
+other commercial context — they have opted into the terms below. The terms are
+simple: treat your workers and the earth with basic decency, or your license
+terminates. This is not an unusual demand. It is the minimum required to
+participate in a world worth living in.
+
+I am a Christian and a Mennonite. This license is also an expression of faith.
+Human institutions have a spirit, and that spirit can be captured entirely by
+the profit motive, made to serve death rather than life. Isaiah asked: is this
+the fast you choose — to serve your own interests while oppressing your workers?
+The answer, applied here: is this the commons you choose — to extract from the
+labor of the free while your own workers have no voice and the earth burns?
+
+> "It is only the oppressed who, by freeing themselves, can free their
+> oppressors." — Paulo Freire
+
+> "The LORD God took the man and put him in the Garden of Eden to work it
+> and take care of it." — Genesis 2:15
+
+> "Is not this the fast that I choose: to loose the bonds of injustice, to
+> undo the thongs of the yoke, to let the oppressed go free, and to break
+> every yoke?" — Isaiah 58
+
+---
+
+## The Poison Pill License
+
+By deploying, distributing, or incorporating the Licensed Software (defined
+below) in any commercial product or service, You accept and agree to be bound
+by the terms and conditions of this Poison Pill License. To the extent this
+License may be interpreted as a contract, You are granted the Licensed Rights
+in consideration of Your acceptance of these terms.
+
+### Definitions
+
+1. **Licensed Software** means the kate-retro-scanlines-plugin source code,
+   compiled binaries, and any derivative works thereof.
+
+2. **Licensed Rights** means the rights to use, copy, modify, merge, publish,
+   distribute, sublicense, and/or sell copies of the Licensed Software, subject
+   to the conditions herein.
+
+3. **Licensor** means Jeremiah John (glassdimly).
+
+4. **Licensee** / **You** / **Your** means the organization exercising the
+   Licensed Rights under this Poison Pill License.
+
+5. **Deploy** means to run, embed, bundle, distribute, or otherwise make the
+   Licensed Software available as part of a product, service, or tool used by
+   persons other than the Licensee's own developers for internal development
+   purposes.
+
+6. **Worker** means any permanent, temporary, agency, piece-rate, salaried,
+   hourly, part-time, or contract worker employed by or contracted to the
+   Licensee or any entity in the Licensee's Supply Chain.
+
+7. **Supply Chain** means the sequence of persons and entities involved in the
+   production and/or distribution of goods or services offered by the Licensee.
+
+8. **Supply Chain Impacted Party** means any person directly impacted by the
+   Licensee's Supply Chain, including communities affected by environmental
+   harm.
+
+9. **Duty of Care** means the obligation to act with the watchfulness,
+   attention, caution, and prudence that a reasonable person in the same
+   circumstances would use toward any Supply Chain Impacted Party.
+
+10. **AI** means a machine-based system that can, for human-defined objectives,
+    make predictions, recommendations, or produce outputs that could reasonably
+    be mistaken for human-generated work.
+
+### Section 1 — Ethical Conditions
+
+The Licensed Rights are expressly conditioned on the Licensee's ongoing
+compliance with the following. The Licensee SHALL NOT, whether directly or
+indirectly through agents or assigns:
+
+**1.1.** Infringe upon any person's right to life or security of person, engage
+in extrajudicial killings, or commit murder (See Article 3, UN Universal
+Declaration of Human Rights; Article 6, ICCPR).
+
+**1.2.** Hold any person in slavery, servitude, or forced labor; or contribute
+to the institutions of slavery, slave trading, or unlawful child labor
+(See Article 4, UDHR; Article 8, ICCPR).
+
+**1.3.** Torture or subject any person to cruel, inhumane, or degrading
+treatment or punishment (See Article 5, UDHR; Article 7, ICCPR).
+
+**1.4.** Discriminate on the basis of sex, gender, sexual orientation, race,
+ethnicity, nationality, religion, caste, age, or disability (See Article 7,
+UDHR; Article 26, ICCPR).
+
+**1.5.** Deploy this software as a component of any mass surveillance system,
+including systems that track, profile, or monitor individuals without their
+free, prior, and informed consent.
+
+**1.6.** Deploy this software as a component of any military weapons system,
+autonomous weapons platform, or lethal targeting system.
+
+**1.7.** Prevent Workers from freely organizing, forming unions, or engaging in
+collective bargaining (See Article 20, UDHR; ILO Convention No. 87).
+
+**1.8.** Commit ecocide, defined as acts with a substantial likelihood of
+causing severe and either widespread or long-term damage to the environment,
+including:
+
+- **(a)** irreversible harm to ecosystems, biodiversity, watersheds, or
+  atmosphere;
+- **(b)** nationally or globally significant increases in carbon emissions
+  resulting from the Licensee's products or infrastructure, including data
+  centers operated in service of AI systems that incorporate this software.
+
+**1.9.** Arbitrarily deprive any person of property, subject any person to
+arbitrary arrest or detention, or engage in arbitrary interference with a
+person's privacy or correspondence (See Articles 9, 12, 17, UDHR).
+
+**1.10.** Forcibly remove indigenous peoples from their lands or territories,
+or dispossess indigenous peoples of their intellectual property or traditional
+knowledge without free, prior, and informed consent (See Articles 8 and 10,
+UN Declaration on the Rights of Indigenous Peoples).
+
+The Licensee SHALL:
+
+**1.11.** Provide equal pay for equal work without discrimination on the basis
+of sex, gender, race, ethnicity, nationality, religion, caste, age, or
+disability, except where differentials are based on seniority, merit, or
+quantity/quality of production (See 29 U.S.C.A. § 206(d)(1); Article 23,
+UDHR; Article 7, ICESCR).
+
+**1.12.** Allow reasonable limitation of working hours and periodic paid
+holidays (See Article 24, UDHR; Article 7, ICESCR).
+
+**1.13.** Make supply chain data publicly accessible, including manufacturers,
+top-tier suppliers, subcontractors, and component producers, on a website
+accessible via common internet search.
+
+### Section 2 — Supply Chain Impacted Parties
+
+**2.1.** The Licensee voluntarily accepts a Duty of Care for Supply Chain
+Impacted Parties, including individuals and communities harmed by violations
+of Section 1.
+
+**2.2.** Breach of the Duty of Care creates a private right of action,
+allowing any Supply Chain Impacted Party to take legal action against the
+Licensee under applicable negligence, tort, or delict law, regardless of
+whether the Licensee is directly responsible for the harm.
+
+### Section 3 — Grant of Rights
+
+Subject to compliance with Section 1, the Licensor grants the Licensee a
+worldwide, royalty-free, non-sublicensable license to use, copy, modify,
+merge, publish, distribute, and Deploy the Licensed Software in commercial
+contexts.
+
+No downstream restrictions: You may not impose additional terms that restrict
+recipients' exercise of the Licensed Rights.
+
+No endorsement: Nothing in this License constitutes permission to imply
+affiliation with, or endorsement by, the Licensor.
+
+Patent and trademark rights are not licensed under this License.
+
+### Section 4 — Term and Termination
+
+**4.1.** This License applies for the duration of applicable copyright.
+
+**4.2.** If the Licensee violates Section 1, all rights granted by this License
+terminate automatically.
+
+**4.3.** Terminated rights reinstate automatically if the violation is cured
+within 30 days of the Licensee's discovery of the violation, or upon express
+written reinstatement by the Licensor.
+
+**4.4.** A finding by any court, arbitral body, or regulatory authority that
+the Licensee has committed acts in violation of Section 1 terminates all rights
+immediately.
+
+**4.5.** Termination does not prevent the Licensor or any Supply Chain Impacted
+Party from seeking remedies at law or in equity.
+
+### Section 5 — Disclaimer of Warranties
+
+The Licensed Software is offered as-is and as-available. The Licensor makes no
+representations or warranties of any kind, express or implied, including
+without limitation warranties of merchantability, fitness for a particular
+purpose, or non-infringement. Where disclaimers of warranties are not allowed
+in full or in part, this disclaimer may not apply to You.
+
+### Section 6 — Limitation of Liability
+
+To the extent possible, the Licensor shall not be liable for any direct,
+indirect, incidental, consequential, punitive, or other losses arising out of
+this License or use of the Licensed Software. Where a limitation of liability
+is not allowed in full or in part, this limitation may not apply to You.
+
+### Section 7 — Miscellaneous
+
+**7.1.** If any provision is found unenforceable, it shall be reformed to the
+minimum extent necessary to make it enforceable, or severed without affecting
+the remainder.
+
+**7.2.** No waiver of any term shall be effective unless expressly agreed to
+in writing by the Licensor.
+
+**7.3.** This License constitutes the entire agreement between Licensor and
+Licensee with respect to the Licensed Software and supersedes all prior
+agreements, oral or written.
+
+**7.4.** This License shall be binding upon the heirs, successors, and assigns
+of both parties.
+
+— finis —

@@ -1,0 +1,92 @@
+/* Kate writerly UI chrome — Alegreya SC 14pt for all non-editor widgets */
+
+* {
+    font-family: "Alegreya SC";
+    font-size: 14pt;
+}
+
+/* ── Palette reference (Palimpsest Dark) ───────────────────────────────────
+   Window bg:    #141e22    Dark surface:  #0d1518    Mid surface:   #111b1f
+   Text (cyan):  #19ffff    Bright text:   #66ffff    Highlight:     #4a1a8a
+   Accent:       #0baaba
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* ── Phosphor glow on chrome surfaces ───────────────────────────────────────
+   Scanlines attempted via background-image (4×8 PNG, 80% dark band).
+   If they don't show, QStyle::drawPrimitive is overpainting the image path
+   and scanlines need a custom QStyle plugin to implement.
+   Glow = gradient bleeding cyan at panel edges + bright border line.        */
+
+QMenuBar {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0    #0a1316,
+        stop:0.40 #141e22,
+        stop:0.65 rgba(25, 255, 255, 0.12),
+        stop:0.85 rgba(25, 255, 255, 0.32),
+        stop:1    rgba(25, 255, 255, 0.52));
+    background-image: url(__QSS_DIR__/scanlines.png);
+    background-repeat: repeat;
+    border-bottom: 3px solid rgba(25, 255, 255, 0.95);
+    padding: 1px 0 3px 0;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 3px 10px;
+    color: #19ffff;
+}
+
+QMenuBar::item:selected,
+QMenuBar::item:pressed {
+    background-color: rgba(74, 26, 138, 0.65);
+    color: #66ffff;
+}
+
+QMenu {
+    background-color: #141e22;
+    background-image: url(__QSS_DIR__/scanlines.png);
+    background-repeat: repeat;
+    border: 2px solid rgba(25, 255, 255, 0.65);
+}
+
+QMenu::item:selected {
+    background-color: rgba(74, 26, 138, 0.65);
+    color: #66ffff;
+}
+
+QMenu::separator {
+    height: 1px;
+    background: rgba(25, 255, 255, 0.25);
+    margin: 2px 8px;
+}
+
+QToolBar {
+    background-color: #141e22;
+    background-image: url(__QSS_DIR__/scanlines.png);
+    background-repeat: repeat;
+    border: none;
+    border-bottom: 2px solid rgba(25, 255, 255, 0.40);
+    spacing: 2px;
+}
+
+QStatusBar {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0    rgba(25, 255, 255, 0.52),
+        stop:0.15 rgba(25, 255, 255, 0.32),
+        stop:0.35 rgba(25, 255, 255, 0.12),
+        stop:0.60 #0d1518,
+        stop:1    #0d1518);
+    background-image: url(__QSS_DIR__/scanlines.png);
+    background-repeat: repeat;
+    border-top: 3px solid rgba(25, 255, 255, 0.95);
+    color: #19ffff;
+}
+
+QDockWidget::title {
+    background-color: #111b1f;
+    background-image: url(__QSS_DIR__/scanlines.png);
+    background-repeat: repeat;
+    border-bottom: 2px solid rgba(25, 255, 255, 0.55);
+    padding: 4px 6px;
+    color: #19ffff;
+}
